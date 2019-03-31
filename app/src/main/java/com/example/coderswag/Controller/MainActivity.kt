@@ -3,7 +3,6 @@ package com.example.coderswag.Controller
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.example.coderswag.Adapters.CategoryAdapter
 import com.example.coderswag.Adapters.CategoryRecycleAdapter
 import com.example.coderswag.R
 import com.example.coderswag.Services.DataService

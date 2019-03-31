@@ -26,15 +26,15 @@ class CategoryRecycleAdapter(val context: Context, val categories: List<Category
         holder.bindCategory(categories[position], context)
     }
 
-    inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView as View) {
 
-        val categoryImage = itemView.findViewById<ImageView>(R.id.categoryImage)
-        val categoryName = itemView.findViewById<TextView>(R.id.categoryName)
+        val categoryImage = itemView?.findViewById<ImageView>(R.id.categoryImage)
+        val categoryName = itemView?.findViewById<TextView>(R.id.categoryName)
 
         fun bindCategory(category: Category, context: Context) {
             val resourceId = context.resources.getIdentifier(category.image, "drawable", context.packageName)
-            categoryImage.setImageResource(resourceId)
-            categoryName.text = category.title
+            categoryImage?.setImageResource(resourceId)
+            categoryName?.text = category.title
         }
     }
 }
