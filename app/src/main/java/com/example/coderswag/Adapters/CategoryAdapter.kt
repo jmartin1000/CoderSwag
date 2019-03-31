@@ -2,6 +2,7 @@ package com.example.coderswag.Adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,7 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val categoryView: View
+
 
         categoryView = LayoutInflater.from(context).inflate(R.layout.category_list_item, null)
         val categoryImage : ImageView = categoryView.findViewById(R.id.categoryImage)
