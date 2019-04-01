@@ -1,5 +1,6 @@
 package com.example.coderswag.Services
 
+import android.os.Parcelable
 import com.example.coderswag.Model.Category
 import com.example.coderswag.Model.Product
 
@@ -61,5 +62,17 @@ object DataService {
             "HOODIES" -> hoodies
             else -> digitalGoods
         }
+    }
+
+    fun getSelectedProduct(category: String, productTitle: String) : Product {
+        val products = getProducts(category)
+        val defaultProduct = Product( "Item not found", "$0", "digitalgoodsimage")
+        for (product in products) {
+            if (product.title == productTitle) {
+                return product
+            }
+        }
+        return defaultProduct
+
     }
 }
