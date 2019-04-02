@@ -12,26 +12,26 @@
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/selectedProductName" android:layout_marginTop="32dp"
+            android:id="@+id/selectedProductDetailName" android:layout_marginTop="32dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:textAlignment="center" android:textSize="30sp" tools:text="Beanie"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/selectedProductImage" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/selectedProductName"
+            android:id="@+id/selectedProductDetailImage" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectedProductDetailName"
             app:layout_constraintHorizontal_bias="0.496" android:scaleType="centerInside"
             tools:srcCompat="@drawable/hat1" app:layout_constraintDimensionRatio="w,1:1"
             android:contentDescription="image of product"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/selectedProductDescription" tools:text="blahblahblah"
+            android:id="@+id/selectedProductDetailDescription" tools:text="blahblahblah"
             android:textSize="18sp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/selectedProductImage" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/selectedProductDetailImage" android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp" android:textAlignment="center"/>
     <Button
             android:text="@string/buy_now"
@@ -40,5 +40,5 @@
             android:id="@+id/buyButton" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-    />
+            android:onClick="buyButtonClicked"/>
 </android.support.constraint.ConstraintLayout>
